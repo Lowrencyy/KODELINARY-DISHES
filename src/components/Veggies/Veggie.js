@@ -6,7 +6,7 @@ import '@splidejs/react-splide/css';
 
 
 
-const apiKey = '974fbe5df41640ca82e759fade2e0b46'
+// const apiKey = '974fbe5df41640ca82e759fade2e0b46'
 
 function Veggie() {
  
@@ -24,7 +24,7 @@ function Veggie() {
             setVeggies(JSON.parse(check));
         } 
         else {  
-        const api = await fetch (`https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=6&tags=vegetarian`);  
+        const api = await fetch (`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=6&tags=vegetarian`);  
         const data = await api.json();
         localStorage.setItem('vegetar' , JSON.stringify(data.recipes));
         setVeggies(data.recipes);

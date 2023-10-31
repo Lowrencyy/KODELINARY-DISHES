@@ -6,9 +6,10 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-      <h1>Kodelinary dishes</h1>
+      <h1>THIS IS TAILWIND HEADER</h1>
       <Category/>
       <Pages/>
+      <h1>THIS IS TAILWIND FOOTER</h1>
     </BrowserRouter>
     </div>
   )
