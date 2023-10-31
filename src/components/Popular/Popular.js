@@ -30,7 +30,7 @@ function Popular() {
         const data = await api.json();
         localStorage.setItem('popularr' , JSON.stringify(data.recipes));
         setPopular(data.recipes);
-        console.log(data.recipes);
+        console.loh1(data.recipes);
         }      
         
     };

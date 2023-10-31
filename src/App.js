@@ -1,15 +1,16 @@
 import Pages from './pages/Pages'
 import Category from './components/Category'
 import { BrowserRouter } from 'react-router-dom'
-
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer'
 function App() {
   return (
     <div>
       <BrowserRouter>
-      <h1>THIS IS TAILWIND HEADER</h1>
+      <Header/>
       <Category/>
       <Pages/>
-      <h1>THIS IS TAILWIND FOOTER</h1>
+      <Footer/>
     </BrowserRouter>
     </div>
   )

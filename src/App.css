@@ -2,14 +2,17 @@
   text-align: center;
 }
 
-Wrapper{ 
-  margin: 4rem 0rem;
+.Wrapper{ 
+  /* margin: 4rem 0rem; */
+  padding-left: 90px;
+  padding-right: 90px;
 }
 
 .Card{
   min-height: 18rem;
   border-radius:18rem;
   overflow: hidden;
+  
 }
 
 .popularImg{ 
@@ -51,8 +54,9 @@ Wrapper{
 
 /* vegetarian section  */
 
-Wrapper-veggies{ 
-  margin: 4rem 0rem;
+.Wrapper-veggies{ 
+  /* margin: 4rem 0rem; */
+  margin:20px
 }
 
 .Card-veggies{
