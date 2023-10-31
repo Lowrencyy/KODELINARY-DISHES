@@ -1,5 +1,10 @@
 .text-center{
   text-align: center;
+  font-family: 'Alkatra';
+  padding-bottom: 20px;
+  font-size: 32px;
+  opacity: 0.75;
+	
 }
 
 .Wrapper{ 
