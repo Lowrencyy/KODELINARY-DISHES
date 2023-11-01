@@ -2,6 +2,7 @@ import { useEffect , useState} from "react";
 // import styled from "styled-components";
 import { Splide , SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
+import { Link } from "react-router-dom";
 // import App from "../../App.css";
 
 
@@ -52,10 +53,12 @@ function Veggie() {
                     return(
                         <SplideSlide key={recipe.id}>
                             <div className="Card-veggies">
+                            <Link to={'/recipe/' + recipe.id}>
                             <p className="veggiesP">{recipe.title}</p>
                             <img className="veggiesImg" src={recipe.image} alt={recipe.title} />
                             <div className="Gradient-veggies"/>
-                        </div>
+                            </Link>
+                            </div>
                         </SplideSlide>
                     );
                 })}

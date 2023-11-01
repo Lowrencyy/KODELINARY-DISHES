@@ -3,6 +3,7 @@ import { useEffect , useState} from "react";
 import { Splide , SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
 import App from "../../App.css";
+import { Link } from "react-router-dom";
 
 
 
@@ -55,10 +56,12 @@ function Popular() {
                     return(
                         <SplideSlide key={recipe.id}>
                             <div className="Card">
-                            <p className="popularP">{recipe.title}</p>
-                            <img className="popularImg" src={recipe.image} alt={recipe.title} />
+                            <Link to={"/recipe/" + recipe.id}>
+                                 <p className="popularP">{recipe.title}</p>
+                                <img className="popularImg" src={recipe.image} alt={recipe.title} />
                             <div className="Gradient"/>
-                        </div>
+                            </Link>
+                            </div>
                         </SplideSlide>
                     );
                 })}

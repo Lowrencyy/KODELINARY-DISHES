@@ -10,7 +10,7 @@ function App() {
     <div>
       <BrowserRouter>
       <Header/>
-      <Search/>
+     <Search/>
       <Category/>
       <Pages/>
       <Footer/>
