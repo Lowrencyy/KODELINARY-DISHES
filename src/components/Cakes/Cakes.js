@@ -2,6 +2,7 @@ import { useEffect , useState} from "react";
 // import styled from "styled-components";
 import { Splide , SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
+import { Link } from "react-router-dom";
 // import App from "../../App.css";
 
 
@@ -18,15 +19,15 @@ function Veggie() {
     },[]);
     const getVeggies = async () => {
 
-        const check = localStorage.getItem('vegetar');
+        const check = localStorage.getItem('cakess');
 
         if(check) {
             setVeggies(JSON.parse(check));
         } 
         else {  
-        const api = await fetch (`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=6&tags=cake`);  
+        const api = await fetch (`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=6&tags=cakes`);  
         const data = await api.json();
-        localStorage.setItem('vegetar' , JSON.stringify(data.recipes));
+        localStorage.setItem('cakess' , JSON.stringify(data.recipes));
         setVeggies(data.recipes);
         console.log(data.recipes);
         }       
@@ -52,9 +53,11 @@ function Veggie() {
                     return(
                         <SplideSlide key={recipe.id}>
                             <div className="Card-veggies">
+                            <Link to={'/recipe/'+recipe.id}>
                             <p className="veggiesP">{recipe.title}</p>
                             <img className="veggiesImg" src={recipe.image} alt={recipe.title} />
                             <div className="Gradient-veggies"/>
+                            </Link>
                         </div>
                         </SplideSlide>
                     );
