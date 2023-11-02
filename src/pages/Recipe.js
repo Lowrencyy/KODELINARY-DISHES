@@ -9,6 +9,7 @@ function Recipe() {
  let params = useParams();
 
  const [details , setDetails] = useState({});
+ const [activeTab, setActivetab] = useState('instructions');
 
  const fetchDetails = async () => {
     const data = await fetch(`https://api.spoonacular.com/recipes/${params.name}/information?apiKey=${process.env.REACT_APP_API_KEY}`
@@ -29,8 +30,8 @@ useEffect(() => {
             <img src={details.image} alt={details.title} />
         </div>
         <Info>
-            <Button>Instruction</Button>
-            <Button>Ingredients</Button>
+            <Button className={activeTab ==='ingredients' ? 'active': ''} onClick={() => setActivetab('instructions')}>Instructions</Button>
+            <Button className={activeTab === 'ingredients'? '':'active'} onClick={() => setActivetab('ingredients')}>Ingredients</Button>
         </Info>
     </DetailWrapper>
   )

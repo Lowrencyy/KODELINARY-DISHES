@@ -65,7 +65,7 @@ function Veggie() {
                 </Splide>
             </div>
      
-    
+    ``
        
     </div>
   )

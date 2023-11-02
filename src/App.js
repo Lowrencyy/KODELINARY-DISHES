@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer'
 import Search from './components/Search/Search';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

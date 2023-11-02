@@ -3,6 +3,7 @@ import { useEffect , useState} from "react";
 import { Splide , SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
 import { Link } from "react-router-dom";
+
 // import App from "../../App.css";
 
 
@@ -38,9 +39,10 @@ function Veggie() {
    
     
             <div className="Wrapper-veggies">
-                <h2 className="text-center">Vegetarian Section</h2>
+                <h2 className="text-center">CAKES AND SWEET</h2>
+                <h2 className="text-warning">CAKES AND SWEET</h2>
                 <Splide options={{
-                    perPage:5,
+                    perPage:4,
                     arrows:false,
                     pagination:false,
                     gap:'1rem',
